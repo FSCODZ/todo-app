@@ -5,7 +5,7 @@ import logga from '../images/logga.jpg';
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
-  { name: 'Todo List', href: '/todo', current: false },
+  { name: 'Todo list', href: '/todo', current: false },
 ];
 
 function classNames(...classes: string[]) {

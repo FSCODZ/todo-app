@@ -16,6 +16,10 @@ const TodoList: React.FC = () => {
     setTasks(tasks.filter(task => task !== taskToRemove)); 
   };
 
+  const clearAllTasks = () => {
+    setTasks([]);
+  };
+
   return (
     <div className="max-w-md mx-auto bg-gray-900 shadow-lg rounded-lg overflow-hidden mt-16"> 
       <div className="px-4 py-2">
@@ -51,8 +55,19 @@ const TodoList: React.FC = () => {
           </li>
         ))}
       </ul>
+      {tasks.length > 0 && (
+        <div className="px-4 py-2">
+          <button
+            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded w-full"
+            onClick={clearAllTasks}
+          >
+            Clear All Tasks
+          </button>
+        </div>
+      )}
     </div>
   );
 };
+
 
 export default TodoList;
