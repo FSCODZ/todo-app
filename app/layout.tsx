@@ -1,4 +1,3 @@
-// /app/layout.tsx
 import './globals.css';
 import Header from './components/Header';
 
@@ -13,8 +12,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-800 text-white"> {/* Lägg till bakgrund och textfärg här */}
-        <Header /> {/* Lägg till Header */}
+      <body className="bg-gray-800 text-white"> 
+        <Header /> 
         <main>{children}</main>
       </body>
     </html>
